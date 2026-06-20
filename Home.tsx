@@ -1,1 +1,74 @@
-import { useEffect } from 'react';\nimport { Button } from '@/components/ui/button';\nimport { Card } from '@/components/ui/card';\nimport { Link } from 'wouter';\n\nconst Home = () => {\n  useEffect(() => {\n    document.title = 'Portal IA 2025 - O Futuro da Inteligencia Artificial';\n  }, []);\n\n  return (\n    <div className=\"min-h-screen bg-white\">\n      {/* Hero */}\n      <section className=\"relative h-96 bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center\">\n        <div className=\"text-center text-white px-4\">\n          <h1 className=\"text-5xl font-bold mb-4\">Inteligencia Artificial 2025</h1>\n          <p className=\"text-xl mb-8\">Explore tendencias, ferramentas e aplicacoes de IA</p>\n          <Link href=\"/blog\">\n            <Button className=\"bg-white text-blue-600 hover:bg-gray-100\">Explorar Blog</Button>\n          </Link>\n        </div>\n      </section>\n\n      {/* Conceitos */}\n      <section className=\"py-16 px-4 max-w-6xl mx-auto\">\n        <h2 className=\"text-4xl font-bold mb-12 text-center\">O que eh IA?</h2>\n        <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6\">\n          <Card className=\"p-6\">\n            <h3 className=\"font-bold text-lg mb-2\">Machine Learning</h3>\n            <p className=\"text-gray-600\">Aprendizado de maquina permite que computadores aprendam com dados</p>\n          </Card>\n          <Card className=\"p-6\">\n            <h3 className=\"font-bold text-lg mb-2\">Deep Learning</h3>\n            <p className=\"text-gray-600\">Redes neurais de multiplas camadas para processar dados complexos</p>\n          </Card>\n          <Card className=\"p-6\">\n            <h3 className=\"font-bold text-lg mb-2\">NLP</h3>\n            <p className=\"text-gray-600\">Processamento de linguagem natural para entender texto</p>\n          </Card>\n          <Card className=\"p-6\">\n            <h3 className=\"font-bold text-lg mb-2\">Visao Computacional</h3>\n            <p className=\"text-gray-600\">Interpretacao de imagens e videos com precisao</p>\n          </Card>\n        </div>\n      </section>\n\n      {/* Tendencias */}\n      <section className=\"py-16 px-4 bg-gray-50 max-w-6xl mx-auto w-full\">\n        <h2 className=\"text-4xl font-bold mb-12 text-center\">Tendencias 2025-2026</h2>\n        <div className=\"grid grid-cols-1 md:grid-cols-3 gap-6\">\n          <Card className=\"p-6\">\n            <h3 className=\"font-bold text-lg mb-2\">Assistentes Virtuais</h3>\n            <p className=\"text-gray-600\">Sistemas inteligentes multimodais</p>\n          </Card>\n          <Card className=\"p-6\">\n            <h3 className=\"font-bold text-lg mb-2\">IA Agencia</h3>\n            <p className=\"text-gray-600\">Sistemas autonomos e inteligentes</p>\n          </Card>\n          <Card className=\"p-6\">\n            <h3 className=\"font-bold text-lg mb-2\">Regulacao e Etica</h3>\n            <p className=\"text-gray-600\">Frameworks para uso responsavel</p>\n          </Card>\n          <Card className=\"p-6\">\n            <h3 className=\"font-bold text-lg mb-2\">Plataformas Nativas</h3>\n            <p className=\"text-gray-600\">Desenvolvimento mais rapido</p>\n          </Card>\n          <Card className=\"p-6\">\n            <h3 className=\"font-bold text-lg mb-2\">IA Multimodal</h3>\n            <p className=\"text-gray-600\">Processamento integrado</p>\n          </Card>\n          <Card className=\"p-6\">\n            <h3 className=\"font-bold text-lg mb-2\">Physical AI</h3>\n            <p className=\"text-gray-600\">IA no mundo fisico</p>\n          </Card>\n        </div>\n      </section>\n\n      {/* CTA */}\n      <section className=\"py-16 px-4 bg-blue-600 text-white text-center\">\n        <h2 className=\"text-3xl font-bold mb-4\">Mantenha-se Atualizado</h2>\n        <p className=\"mb-8\">Receba as ultimas noticias sobre Inteligencia Artificial</p>\n        <Link href=\"/contato\">\n          <Button className=\"bg-white text-blue-600 hover:bg-gray-100\">Inscrever-se</Button>\n        </Link>\n      </section>\n    </div>\n  );\n};\n\nexport default Home;\n
+import { useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Link } from 'wouter';
+
+const Home = () => {
+  useEffect(() => {
+    // Initialize homepage
+    console.log('Home page loaded');
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-background to-muted p-4 md:p-8">
+      <div className="max-w-4xl mx-auto">
+        {/* Hero Section */}
+        <div className="mb-12 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-primary mb-4">
+            Portal IA 2025
+          </h1>
+          <p className="text-xl text-muted-foreground mb-8">
+            O Futuro da Inteligência Artificial
+          </p>
+          <Link href="/about">
+            <Button size="lg" className="mr-4">
+              Saiba Mais
+            </Button>
+          </Link>
+          <Link href="/contact">
+            <Button variant="outline" size="lg">
+              Entrar em Contato
+            </Button>
+          </Link>
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <Card className="p-6">
+            <h3 className="text-xl font-semibold mb-3 text-primary">IA Avançada</h3>
+            <p className="text-muted-foreground">
+              Explore as tecnologias mais recentes em inteligência artificial
+            </p>
+          </Card>
+          <Card className="p-6">
+            <h3 className="text-xl font-semibold mb-3 text-primary">Inovação</h3>
+            <p className="text-muted-foreground">
+              Descobra soluções inovadoras para problemas complexos
+            </p>
+          </Card>
+          <Card className="p-6">
+            <h3 className="text-xl font-semibold mb-3 text-primary">Comunidade</h3>
+            <p className="text-muted-foreground">
+              Conecte-se com especialistas e entusiastas de IA
+            </p>
+          </Card>
+        </div>
+
+        {/* CTA Section */}
+        <Card className="p-8 bg-primary text-primary-foreground text-center">
+          <h2 className="text-3xl font-bold mb-4">Pronto para o futuro?</h2>
+          <p className="mb-6 text-lg opacity-90">
+            Junte-se a nossa comunidade e fique atualizado com as últimas inovações em IA
+          </p>
+          <Link href="/newsletter">
+            <Button variant="secondary" size="lg">
+              Inscrever-se na Newsletter
+            </Button>
+          </Link>
+        </Card>
+      </div>
+    </div>
+  );
+};
+
+export default Home;

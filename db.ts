@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, blogPosts, contacts } from "../drizzle/schema";
+import { InsertUser, users, blogPosts, contacts } from "./schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -156,4 +156,3 @@ export async function getBlogPostBySlug(slug: string) {
     return null;
   }
 }
-
